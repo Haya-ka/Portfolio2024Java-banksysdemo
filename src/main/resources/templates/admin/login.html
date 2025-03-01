@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>管理者ログイン</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	
+	<div style="background-color: #333; color: white; padding: 10px 30px; text-align: left; height: 120px;">
+		<h1>＠金沢 NETbank　管理者用ページ</h1>
+	</div>
+	
+	<div class="login-container">
+		<h2>管理者ログイン</h2>
+		<form action="/admin/login" method="post">
+			<label for="email">メールアドレス:</label>
+			<input type="email" id="email" name="email" required>
+			<label for="password">パスワード:</label>
+			<input type="password" id="password" name="password" required>
+			<button type="submit">ログイン</button>
+		</form>
+	</div>
+	
+	<div style="background-color: #333; color: white; text-align: right; padding: 10px 20px;">
+		<p><a href="../login" style="color: white; text-decoration: none;">ホーム</a></p>
+	</div>
+	
+</body>
+</html>

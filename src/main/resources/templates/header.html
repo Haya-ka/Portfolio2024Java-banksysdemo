@@ -1,0 +1,16 @@
+<header style="background-color: #00bcd4; color: white; padding: 10px 30px; text-align: left;">
+	<h1>＠東京ネットバンキング</h1>
+	<nav>
+		<ul style="list-style: none; padding: 0;">
+			<li style="display: inline; margin-right: 15px;"><a th:href="@{/home}" style="color: white; text-decoration: none;">ホーム</a></li>
+			<li style="display: inline; margin-right: 15px;"><a th:href="@{/checkBalance}" style="color: white; text-decoration: none;">残高確認</a></li>
+			<li style="display: inline; margin-right: 15px;"><a th:href="@{/deposit}" style="color: white; text-decoration: none;">入金</a></li>
+			<li style="display: inline; margin-right: 15px;"><a th:href="@{/withdraw}" style="color: white; text-decoration: none;">出金</a></li>
+			<li style="display: inline; margin-right: 15px;"><a th:href="@{/transfer}" style="color: white; text-decoration: none;">送金</a></li>
+			<li style="display: inline; margin-right: 15px;"><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: white; text-decoration: none;">ログアウト</a>
+			<form id="logout-form" action="#" th:action="@{/logout}" method="post" style="display: none;">
+				<!-- Hidden logout form -->
+			</form>
+		</ul>
+	</nav>
+</header>

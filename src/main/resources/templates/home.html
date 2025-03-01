@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ホーム</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<div th:replace="~{header.html}"></div>
+	
+	<div class="contents-container">
+		<h1>ようこそ、<span th:text="${name}"></span>様</h1>
+		<h3>Menu</h3>
+		<ul>
+			<li><a th:href="@{/checkBalance}">口座残高確認</a></li>
+			<li><a th:href="@{/deposit}">入金</a></li>
+			<li><a th:href="@{/withdraw}">出金</a></li>
+			<li><a th:href="@{/transfer}">送金</a></li>
+		</ul>
+	
+		<form action="#" th:action="@{/logout}" method="post">
+			<button type="submit">Logout</button>
+		</form>
+	</div>
+	
+	<div th:replace="~{footer.html}"></div>
+</body>
+</html>

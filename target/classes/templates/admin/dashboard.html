@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>管理者ダッシュボード</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+		
+	<div style="background-color: #333; color: white; padding: 10px 30px; text-align: left; height: 120px;">
+		<h1>＠金沢 NETbank　管理者用ページ</h1>
+		<nav>
+			<ul style="list-style: none; padding: 0;">
+				<li style="display: inline; margin-right: 15px;"><a href="/admin/dashboard" style="color: white; text-decoration: none;">ダッシュボード</a></li>
+				<li style="display: inline; margin-right: 15px;"><a th:href="@{/admin/addUser}" style="color: white; text-decoration: none;">新規ユーザー登録</a></li>
+				<li style="display: inline; margin-right: 15px;"><a th:href="@{/admin/createAccount}" style="color: white; text-decoration: none;">新規口座開設</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<div class="contents-container">
+		<h1>管理者ダッシュボード</h1>
+		<p>ログイン中: <span th:text="${adminEmail}"></span></p>
+	</div>
+	
+	<div style="background-color: #333; color: white; text-align: right; padding: 10px 20px;">
+		<a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: white; text-decoration: none;">ログアウト</a>
+		<form id="logout-form" action="#" th:action="@{/admin/logout}" method="post" style="display: none;">
+			<!-- Hidden logout form -->
+		</form>
+	</div>
+	
+</body>
+</html>

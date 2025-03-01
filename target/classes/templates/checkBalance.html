@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>残高確認</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<div th:replace="~{header.html}"></div>
+	
+	<div class="contents-container">
+		<h1>口座残高</h1>
+		<h2> <strong th:text="${balance}">0</strong> 円</h2>
+	</div>
+		
+	<div th:replace="~{footer.html}"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>残高確認</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<div th:replace="~{header.html}"></div>
+	
+	<div class="contents-container">
+		<h1>送金</h1>
+		<form th:action="@{/transfer}" method="post">
+			<label for="senderAccount">送信元口座:</label>
+			<select id="senderAccount" name="senderAccountId" required>
+				<option value="">口座を選択してください</option>
+				<option th:each="account : ${accounts}" th:value="${account.id}" th:text="${account.id}"></option>
+			</select>
+		
+			<label for="recipientEmail">送金先メールアドレス:</label>
+			<input type="email" id="recipientEmail" name="recipientEmail" required>
+		
+			<label for="amount">送金額:</label>
+			<input type="number" id="amount" name="amount" required>
+		
+			<button type="submit">送金する</button>
+		</form>
+	</div>
+	
+	<div th:replace="~{footer.html}"></div>
+</body>
+</html>

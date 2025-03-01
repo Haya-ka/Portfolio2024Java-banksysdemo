@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>残高確認</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<div th:replace="~{header.html}"></div>
+	
+	<div class="contents-container">
+		<h1>出金</h1>
+		<form action="#" th:action="@{/withdraw}" method="post">
+			<input type="number" name="amount" required />
+			<button type="submit">出金する</button>
+		</form>
+	</div>
+	
+	<div th:replace="~{footer.html}"></div>
+</body>
+</html>
